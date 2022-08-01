@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400&display=swap');
+
+:root {
+    --primary-color: #007AF3;
+    --link-color: grey;
+    --feature-color:#20272E;
+}
+
+body {
+    background-color: #f2f2f2;
+    margin:0;
+    font-family: 'Poppins';
+}
+
+
+.navbar {
+    background-color: white;
+    padding: 1em;
+
+    .logo {
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+        font-size: 1.2em;
+
+        span {
+            color: var(--primary-color);
+        }
+    }
+
+    nav {
+        display: none;
+    }
+    
+    .container {
+        display: flex;
+        place-content: space-between;
+    }
+
+    .mobile-menu {
+        cursor: pointer;
+    }    
+}
+
+a {
+    color: #444444;
+}
+
+ul {
+    list-style: none;
+    padding: 0em;
+    margin: 0em;
+}
+
+section {
+    padding: 5em 2em;
+}
+
+.hero {
+    text-align: center;
+    
+    .hero-img {
+        width: 70%;
+        margin-top: 3em;
+    }
+}
+
+.left-col {
+
+    .subhead {
+        color: var(--link-color);
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: .3em;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        line-height: 1.3em;
+        margin-top: .2em;
+    }
+
+    .primary-cta {
+        background: var(--primary-color);
+        color:white;
+        text-decoration: none;
+        padding: .6em 1.3em;
+        font-size: 1.4em;
+        border-radius: 5em;
+        font-weight: bold;
+        display: inline-block;
+    }
+
+    .watch-video-cta {
+        display: block;
+        margin-top: 2em;
+    }
+
+    img {
+        margin-right: .5em;
+    }
+}
+
+section.feature-section {
+    background: var(--feature-color);
+    color:white;
+    
+    ul.feature-list {
+        margin: 0em;
+        padding-left: .1em;
+        //display: grid;
+        li {
+            font-size: 1.1em;
+            margin-bottom: 1em;
+            margin-left: 2em;
+            position: relative;
+
+            &:before {
+                content: '';
+                left: -2em;
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background-image: url(/Images/bullet.svg);
+                background-size: contain;
+                margin-right: .5em;
+            }
+        }
+    }
+    
+    img {
+        display: none;
+    }
+}
